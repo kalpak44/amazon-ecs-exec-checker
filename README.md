@@ -16,7 +16,9 @@ The `check-ecs-exec.sh` requires the following commands.
 ```shell
 $ ./check-ecs-exec.sh <YOUR_ECS_CLUSTER_NAME> <YOUR_ECS_TASK_ID>
 ```
-
+```shell
+$ aws ecs execute-command --cluster <YOUR_ECS_CLUSTER_NAME> --task <YOUR_ECS_TASK_ID> --command "/bin/sh" --interactive
+```
 _Example 1 - Run without cloning Git repo_
 
 The `check-ecs-exec.sh` will use your `default` AWS CLI profile and the AWS region.
